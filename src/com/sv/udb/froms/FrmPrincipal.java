@@ -5,6 +5,8 @@
  */
 package com.sv.udb.froms;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Luis
@@ -74,6 +76,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(btnEjerc3);
 
         btnEjerc4.setText("Ejercicio4");
+        btnEjerc4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEjerc4MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(btnEjerc4);
 
         setJMenuBar(jMenuBar1);
@@ -107,6 +114,22 @@ public class FrmPrincipal extends javax.swing.JFrame {
     FrmEjercicio3 obj = new FrmEjercicio3();
     obj.setVisible(true); 
     }//GEN-LAST:event_btnEjerc3MouseClicked
+
+    private void btnEjerc4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEjerc4MouseClicked
+       int resp;
+        resp=1;
+        
+        while(resp != 0)
+        {
+            int numero = (int) (Math.random()*6+1);
+            System.out.println("El dado tiene el numero: "+numero);
+             System.out.println("Desea cancelar ingrese 0");
+            Scanner br = new Scanner(System.in);
+            resp = br.nextInt();
+           
+            
+        }
+    }//GEN-LAST:event_btnEjerc4MouseClicked
 
     /**
      * @param args the command line arguments
